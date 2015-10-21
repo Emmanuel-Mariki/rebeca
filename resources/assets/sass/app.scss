@@ -1,0 +1,45 @@
+ @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+ body{
+ }
+
+ #header{
+    border-bottom:1px solid #558C89;
+    background-color:#558C89
+ }
+
+ .search-form{
+    margin-top: 20px;
+    margin-bottom: 20px;
+ }
+
+ #top-menu{;padding-bottom: 0px;min-height:160px !important;
+    .row{
+        padding-bottom: 0px;
+    }
+    #top-nav{
+        background-color:#E0BA5F;
+        //border: 1px solid #E0BA5F;
+        border:none;
+        margin-bottom: 0px;
+        .navbar-nav{width: 100% !important;}
+        .navbar-collapse{margin:0;padding:0;}
+    }
+    .nav-justified { 
+         min-height:5rem !important;
+        li{
+            a{ 
+                font-family: 'Josefin Slab', serif;
+                min-height:5rem !important;
+                border:none; 
+                font-size: 1.8rem;margin-bottom:0px; padding-bottom:0px;
+                color: #484848;
+                margin-top: 1rem;
+                &:hover{background-color:#D77BDE; color:#FFFFFF;} 
+            }
+            &:hover{background-color:#D77BDE;}
+        }
+        
+    }
+ }
+
