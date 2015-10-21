@@ -13,6 +13,7 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
     mix.sass('app.scss');
+    //mix.sass('slippry.scss');
 
     mix.scripts([
         'jquery/dist/jquery.min.js',
@@ -21,12 +22,15 @@ elixir(function(mix) {
 
     mix.scripts([
         'js/app.js',
-        'dreamcodes/js/modernizr.custom.js',
-        'dreamcodes/js/jquery.cslider.js'
+        'slide/src/slippry.js',
+        'js/custom.js',
+        //'dreamcodes/js/modernizr.custom.js',
+        //'dreamcodes/js/jquery.cslider.js'
         ],'public/js/app.js','public');
 
     mix.styles([
-        'dreamcodes/css/tsc_parallax.css',
+        //'dreamcodes/css/tsc_parallax.css',
+        'slide/dist/slippry.css',
         'css/app.css'
     ],'public/css/app.css','public');
 });

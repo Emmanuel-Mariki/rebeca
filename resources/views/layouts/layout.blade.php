@@ -88,8 +88,8 @@
                             <p>The Palace of Versailles is pretty amazing, not just inside, but also the outside garden, where you'll find gardens like these sporting amazing ranges of flora.</p>
                             <a href="#!" class="button-link read-more">read more</a>
                           </div>
-                          <div class="image-content"><img src="{{asset('public/img/slides/IMG_2.jpg')}}" alt="demo1_1"></div>
-                        </article>
+                          <div class="image-content"><img src="{{asset('public/img/slides/IMG_2.png')}}" alt="demo1_1"></div>
+                        </article>-->
                   </section>
                 </div>
             </div>
@@ -99,15 +99,7 @@
         @yield('content')
         <script src="{{asset('public/js/app.js')}}"></script>
           <!-- DC Parallax Slider Settings -->
-        <script type="text/javascript">
-                    $(function() {
-
-                        $('#da-slider').cslider({
-                            autoplay    : true, // auto play slider on load
-                            bgincrement : 450
-                        });
-
-                    });
+       
         </script> 
     </body>
 </html>
