@@ -14,8 +14,19 @@ var elixir = require('laravel-elixir');
 elixir(function(mix) {
     mix.sass('app.scss');
 
-    /*mix.scripts([
+    mix.scripts([
         'jquery/dist/jquery.min.js',
         'bootstrap-sass/assets/javascripts/bootstrap.min.js' 
-        ],'public/js/app.js','node_modules');*/
+        ],'public/js/app.js','node_modules');
+
+    mix.scripts([
+        'js/app.js',
+        'dreamcodes/js/modernizr.custom.js',
+        'dreamcodes/js/jquery.cslider.js'
+        ],'public/js/app.js','public');
+
+    mix.styles([
+        'dreamcodes/css/tsc_parallax.css',
+        'css/app.css'
+    ],'public/css/app.css','public');
 });

@@ -7,6 +7,7 @@
         <title>@yield('title')</title>
         <link rel="stylesheet" href="{{asset('public/css/app.css')}}">
         <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:700italic' rel='stylesheet' type='text/css'>
+      
         <link rel="author" href="humans.txt">
     </head>
     <body>
@@ -61,9 +62,47 @@
                 </div>
             </div>
         </header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                        <div style="width:100%; margin:0 auto; padding:0px; position:relative;"> <!-- define slider container width (strict enforce) -->
+                        <div id="da-slider" class="da-slider">
+
+                            <!-- Slide 1 -->
+                            <div class="da-slide">
+                                <h2>Super Sale!</h2>
+                                <p>We're having a massive sale this week! Items up to 30% off. Grab a deal while stocks last! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor interdum malesuada. In a ligula arcu, vel tempus elit. </p>
+                                <a href="#" class="da-link">Read more</a>
+                                <div class="da-img"><img src="http://placehold.it/1400x350" alt="image01" /></div>
+                            </div>
+
+
+                            <!-- navigation controls -->
+                            <nav class="da-arrows">
+                                <span class="da-arrows-prev"></span>
+                                <span class="da-arrows-next"></span>
+                            </nav>
+
+                        </div> <!-- /da-slider -->
+                        </div>
+                        <!-- DC Parallax Slider End -->
+                </div>
+            </div>
+        </div>
         @yield('header')
         @yield('navigations')
         @yield('content')
         <script src="{{asset('public/js/app.js')}}"></script>
+          <!-- DC Parallax Slider Settings -->
+        <script type="text/javascript">
+                    $(function() {
+
+                        $('#da-slider').cslider({
+                            autoplay    : true, // auto play slider on load
+                            bgincrement : 450
+                        });
+
+                    });
+        </script> 
     </body>
 </html>
