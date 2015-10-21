@@ -64,28 +64,33 @@
         </header>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12">
-                        <div style="width:100%; margin:0 auto; padding:0px; position:relative;"> <!-- define slider container width (strict enforce) -->
-                        <div id="da-slider" class="da-slider">
-
-                            <!-- Slide 1 -->
-                            <div class="da-slide">
-                                <h2>Super Sale!</h2>
-                                <p>We're having a massive sale this week! Items up to 30% off. Grab a deal while stocks last! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor interdum malesuada. In a ligula arcu, vel tempus elit. </p>
-                                <a href="#" class="da-link">Read more</a>
-                                <div class="da-img"><img src="http://placehold.it/1400x350" alt="image01" /></div>
-                            </div>
-
-
-                            <!-- navigation controls -->
-                            <nav class="da-arrows">
-                                <span class="da-arrows-prev"></span>
-                                <span class="da-arrows-next"></span>
-                            </nav>
-
-                        </div> <!-- /da-slider -->
-                        </div>
-                        <!-- DC Parallax Slider End -->
+                <div class="col-lg-12" style="padding: 0;"><!--http://placehold.it/1400x400-->
+                    <section id="news-demo">
+                        <article>
+                          <div class="text-content">
+                            <h2>Boats by the bay</h2>
+                            <p>This summer there were, surprise surprise, boats on the bay! Often the sun will shine and when it's partially cloudy we get the 'God' or 'Holy Light' effect. It's pretty cool huh? I wonder what it's pointing to... treasure? Bitcoins?</p>
+                            <a href="#!" class="button-link read-more">read more</a>
+                          </div>
+                          <div class="image-content"><img src="{{asset('public/img/slides/IMG_4.png')}}" alt="demo1_1"></div>
+                        </article>
+                        <article>
+                          <div class="text-content">
+                            <h2>The winter is coming</h2>
+                            <p>And isn't it pretty? It's strange, people who live through heavy winters seem to want to get out of it as soon as possible, yet those who live in more temperate climates see snow and a 'real' winter as an amazing thing that must be experienced.</p>
+                            <a href="#!" class="button-link read-more">read more</a>
+                          </div>
+                          <div class="image-content"><img src="{{asset('public/img/slides/IMG_3.png')}}" alt="demo1_1"></div>
+                        </article>
+                        <article>
+                          <div class="text-content">
+                            <h2>In front of Versailles</h2>
+                            <p>The Palace of Versailles is pretty amazing, not just inside, but also the outside garden, where you'll find gardens like these sporting amazing ranges of flora.</p>
+                            <a href="#!" class="button-link read-more">read more</a>
+                          </div>
+                          <div class="image-content"><img src="{{asset('public/img/slides/IMG_2.jpg')}}" alt="demo1_1"></div>
+                        </article>
+                  </section>
                 </div>
             </div>
         </div>
