@@ -15,7 +15,7 @@ elixir(function(mix) {
     mix.sass('app.scss');
     //mix.sass('slippry.scss');
 
-    mix.scripts([
+    /*mix.scripts([
         'jquery/dist/jquery.min.js',
         'bootstrap-sass/assets/javascripts/bootstrap.min.js' 
         ],'public/js/app.js','node_modules');
@@ -23,6 +23,7 @@ elixir(function(mix) {
     mix.scripts([
         'js/app.js',
         'slide/src/slippry.js',
+        'materialize/js/materialize.min.js',
         'js/custom.js',
         //'dreamcodes/js/modernizr.custom.js',
         //'dreamcodes/js/jquery.cslider.js'
@@ -32,5 +33,5 @@ elixir(function(mix) {
         //'dreamcodes/css/tsc_parallax.css',
         'slide/dist/slippry.css',
         'css/app.css'
-    ],'public/css/app.css','public');
+    ],'public/css/app.css','public');*/
 });

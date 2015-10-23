@@ -1,4 +1,20 @@
- @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/materialize/sass/materialize";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+$primary:#558C89;
+$navigation: #E0BA5F;
+$navigation-hover: #D77BDE;
+$font: 'Josefin Slab', serif;
+.box-shadow{
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.48);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.48);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.48);
+}
+
+.color-primary{
+  color: $primary;
+}
 
  body{
  }
@@ -43,6 +59,85 @@
     }
  }
 
+
+#data-content
+{ 
+  margin-top:1rem; margin-bottom:1rem;
+  #row-data-content
+  {
+    max-width: 97%; margin: 0 auto;
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width: $screen-sm-min) { 
+      max-width: 75%;
+    }
+
+    #content
+    { 
+      margin-bottom:1rem;
+      h1{font-family: $font; padding-top:1.5rem; color:$primary;}
+      .caption
+      {
+        p{margin-bottom:1rem; padding-bottom:2rem; line-height:1.5; text-align:justify;}
+      }
+    }
+
+
+  }
+   #department{
+    background-color: #558C89; color:#FFFFFF; margin-bottom:2.5rem;
+    opacity: 0.9;
+  }
+   #row-columns{
+      text-align: center;
+      .data-column
+       {
+          max-width: 100% ! important;
+
+       }
+       .btn-primary {
+        background-color: #E0BA5F;
+        border:1px solid #E0BA5F;
+        width: 100% !important;
+        &:hover{
+            background-color: $navigation-hover; 
+            border:1px solid $navigation-hover; 
+            font-family: $font;
+        }
+       }
+   } 
+}
+#footer
+{
+  background-color: #558C89;
+  min-height: 25rem;
+  form{
+    padding: 2rem;
+    margin: 2rem;
+    .input-field label
+    {
+      top: -0.2rem;
+      font-size: 2rem;   
+    }
+
+    legend{padding-bottom:0rem; font-family:$font; font-size:5rem;
+        color: #FFFFFF; margin-bottom:3.5rem}
+    textarea,input{color: #FFFFFF;font-size:2rem;}
+  }
+   #map{
+     border-radius:none;margin-top:2rem; 
+    }
+    #address{background-color:transparent; text-align:center;
+      .caption>p{ padding-top:1.2rem;
+        color:#FFFFFF; font-family:$font; font-size:2rem;
+      }
+      @media (min-width: $screen-sm-min) { 
+       margin-bottom: 2rem;
+      }
+
+      margin-bottom: 20rem;
+     
+    }
+}
 /* News */
 .news-slider {
   /* Style the actual content */

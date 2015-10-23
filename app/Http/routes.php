@@ -11,6 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/', [
+    'as' => 'home', 'uses' => 'HomeController@GetIndex']
+);
+Route::get('about-us', [
+    'as' => 'about', 'uses' => 'AboutUsController@GetIndex']
+);
+
+Route::get('partners', [
+    'as' => 'partners', 'uses' => 'PartnersController@GetIndex']
+);
+Route::get('what-we-do', [
+    'as' => 'action', 'uses' => 'WhatWeDoController@GetIndex']
+);
