@@ -1,0 +1,118 @@
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+$primary:#558C89;
+$navigation: #E0BA5F;
+$navigation-hover: #D77BDE;
+$font: 'Josefin Slab', serif;
+.box-shadow{
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.48);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.48);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.48);
+}
+
+.color-primary{
+  color: $primary;
+}
+
+ body{
+  background-color: #CCCCCC;
+ }
+
+ #header{
+    border-bottom:1px solid #558C89;
+    background-color:#558C89
+ }
+
+ .search-form{
+    margin-top: 20px;
+    margin-bottom: 20px;
+ }
+
+ #top-menu{;padding-bottom: 0px;min-height:160px !important;
+    .row{
+        padding-bottom: 0px;
+    }
+    #top-nav{
+        background-color:#E0BA5F;
+        //border: 1px solid #E0BA5F;
+        border:none;
+        margin-bottom: 0px;
+        .navbar-nav{width: 100% !important;}
+        .navbar-collapse{margin:0;padding:0;}
+    }
+    .nav-justified { 
+         min-height:5rem !important;
+        li{
+            a{ 
+                font-family: 'Josefin Slab', serif;
+                min-height:5rem !important;
+                border:none; 
+                font-size: 1.8rem;margin-bottom:0px; padding-bottom:0px;
+                color: #484848;
+                margin-top: 1rem;
+                &:hover{background-color:#D77BDE; color:#FFFFFF;} 
+            }
+            &:hover{background-color:#D77BDE;}
+        }
+        
+    }
+ }
+
+
+#footer
+{
+  background-color: #558C89;
+  min-height: 15rem;
+  position: relative;
+  bottom:0;
+  width: 100% !important;
+
+
+    #address{background-color:transparent; text-align:center;
+      .caption>p{ padding-top:1.2rem;
+        color:#FFFFFF; font-family:$font; font-size:2rem;
+      }
+      @media (min-width: $screen-sm-min) { 
+       margin-bottom: 2rem;
+      }
+
+      margin-bottom: 2rem;
+     
+    }
+}
+.btn{
+  margin:2.5rem auto;
+}
+
+.content-area{
+  padding-bottom: 1rem;
+  .row{
+    .col-lg-12{ 
+      background-color:#FFFFFF; margin-top:1rem;
+      max-width: 98% !important;
+      margin-right: 1%;
+      margin-left: 1%;
+      padding-bottom:2rem;
+      form
+      {
+        padding: 2.5rem;
+        background-color:#67BCDB;
+        fieldset
+        {
+          legend{font-family:$font; color:#FFFFFF; font-size:3rem;}
+        
+        }
+      }
+      table
+      {
+        thead
+        {
+          background-color:$primary;
+        }
+      }
+    }
+  }
+}
+.help-bloc{color:#DF3D82}
+/* News */
