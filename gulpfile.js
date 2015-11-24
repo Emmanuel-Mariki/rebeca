@@ -34,5 +34,19 @@ elixir(function(mix) {
         //'dreamcodes/css/tsc_parallax.css',
         'slide/dist/slippry.css',
         'css/app.css'
-    ],'public/css/app.css','public');*/
+    ],'public/css/app.css','public');
+
+     mix.scripts([
+        'jquery/dist/jquery.min.js',
+        'bootstrap-sass/assets/javascripts/bootstrap.min.js',
+        'sweetalert/dist/sweetalert.min.js'
+        //'dreamcodes/js/modernizr.custom.js',
+        //'dreamcodes/js/jquery.cslider.js'
+        ],'public/js/admin.js','node_modules');*/
+
+    mix.styles([
+        'css/google.css',
+        'css/sweetalert.css',
+        'css/admin.css',
+    ],'public/css/admin.css', 'public');
 });

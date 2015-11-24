@@ -43,12 +43,30 @@ Route::put('pages/update/{url}', [
     'as' => 'update_page', 'uses' => 'PagesController@updatePage']
 );
 
-Route::get('pages/delete/{url}', [
+Route::get('pages/delete/{id}', [
     'as' => 'delete_page', 'uses' => 'PagesController@deletePage']
 );
-Route::delete('pages/destory/{url}', [
-    'as' => 'destroy_page', 'uses' => 'PagesController@deletePage']
-);
+
 Route::get('pages/view/{url}', [
     'as' => 'view_page', 'uses' => 'PagesController@viewPage']
+);
+
+
+Route::get('dropdown', [
+    'as' => 'dropnav', 'uses' => 'DropdownsController@getIndex']
+);
+Route::get('dropdown/add', [
+    'as' => 'add_drop', 'uses' => 'DropdownsController@showForm']
+);
+Route::post('dropdown/create', [
+    'as' => 'dropp_create', 'uses' => 'DropdownsController@createDrop']
+);
+Route::get('dropdown/edit/{id}', [
+    'as' => 'edit_drop', 'uses' => 'DropdownsController@editDrop']
+);
+Route::put('dropdown/update/{id}', [
+    'as' => 'update_drop', 'uses' => 'DropdownsController@updateDrop']
+);
+Route::get('dropdown/delete/{id}', [
+    'as' => 'delete_drop', 'uses' => 'DropdownsController@deletePage']
 );

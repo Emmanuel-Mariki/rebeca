@@ -10,4 +10,10 @@ class Page extends Model
         'name','url','keywords','description','type',
         'created_at','publish','contents','priority'
     ];
+
+    public function dropdowns()
+    {
+        return $this->hasMany('App\dropdowns');
+    }
 }
+

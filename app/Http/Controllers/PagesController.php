@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests;
+use Request;
 use App\Http\Requests\PagesRequest;
 use App\Http\Controllers\Controller;
 use App\Page;
@@ -13,16 +13,17 @@ class PagesController extends Controller
     {
         $pages =  Page::all();
         $title = 'Page List';
-        return view('admin.pages',  compact('pages','title'));
+        return view('admin.pages.pages',  compact('pages','title'));
     }
     
     function showForm()
     {
-        return view('admin.show_form');
+        return view('admin.pages.show_form');
     }
     
-    function createPage(Requests\PagesRequest $request)
+    function createPage(PagesRequest $request)
     {
+        
         $input = $request->all();
         $input['url'] = str_slug($request->name, '-');
         $input['created_at'] = date("Y-m-d H:i:s");
@@ -33,10 +34,10 @@ class PagesController extends Controller
     function editPage($url)
     {
         $page =  Page::where('url',$url)->first();
-        return view('admin.edit_page',  compact('page'));
+        return view('admin.pages.edit_page',  compact('page'));
     }
     
-    function updatePage($url, Requests\PagesRequest $request)
+    function updatePage($url,PagesRequest $request)
     {
         $page = Page::where('url', $url);
         $page->update($this->cleanRequest($request->all()));
@@ -47,17 +48,18 @@ class PagesController extends Controller
     {
         
     }
-    function deletePage($url)
+    function deletePage($id)
     {
-        
-    }
-    
-    function cleanRequest($request)
-    {
-        unset($request['_method']);
-        unset($request['_token']);
-        unset($request['action']);
-        $request['url'] =  str_slug($request['name']);
-        return $request;
+        if(Request::ajax()){
+            $todo = Page::whereId($id)->first();
+            $todo->delete();
+            return "OK";
+        }
+        else 
+        {
+            "ERROR";
+        }
+        //$page = Page::destroy($id);
+        //return redirect('pages')->with('success','The page was removed completetly from the databse');
     }
 }
